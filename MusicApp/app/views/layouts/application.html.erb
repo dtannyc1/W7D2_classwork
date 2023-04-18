@@ -33,6 +33,18 @@
 
     </nav>
 
+    <% if flash[:errors] %>
+        <% flash[:errors].each do |error| %>
+            <p><%= error %></p>
+        <% end %>
+    <% end %>
+
+    <% if flash[:messages] %>
+        <% flash[:messages].each do |message| %>
+            <p><%= message %></p>
+        <% end %>
+    <% end %>
+
     <%= yield %>
   </body>
 </html>
