@@ -53,3 +53,7 @@ nav {
     border-width: 1px;
     border-color: black;
 }
+
+.error-message {
+    color: red;
+}
