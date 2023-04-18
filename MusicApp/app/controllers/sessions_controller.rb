@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
 
     def create
         email = params[:user][:email]
-        password = params[:user][:email]
+        password = params[:user][:password]
 
         @user = User.find_by_credentials(email, password)
 
@@ -25,6 +25,7 @@ class SessionsController < ApplicationController
         logout!
         # flash successful logout?
         flash.now[:messages] = ["Logout Successful!"]
+        @user = User.new
         render :new # redirect to login page?
     end
 end
