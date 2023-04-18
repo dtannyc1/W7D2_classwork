@@ -1,0 +1,8 @@
+<div class="bands-container">
+    <% @bands.each do |band| %>
+        <form action="<%= band_url(band.id) %>" method="GET">
+            <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+            <input type="submit" value="<%= band.name %>" class="band-button">
+        </form>
+    <% end %>
+</div>
