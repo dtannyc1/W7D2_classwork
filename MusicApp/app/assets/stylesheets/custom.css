@@ -57,3 +57,20 @@ nav {
 .error-message {
     color: red;
 }
+
+.bands-container {
+    width: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: blueviolet;
+}
+
+.band-button {
+    width: 33%;
+    height: 20%;
+    background-color: gold;
+}
+
+.band-button:hover{
+    background-color: orange;
+}
