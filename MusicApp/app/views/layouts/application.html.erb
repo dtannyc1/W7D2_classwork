@@ -11,7 +11,27 @@
   </head>
 
   <body>
-    <h1>Music App</h1>
+
+    <nav>
+        <h1>Music App</h1>
+
+        <% if logged_in? %>
+            <form action="<%= session_url %>" method="POST">
+                <input type="hidden" name="_method" value="DELETE">
+                <input type="submit" value="Log Out!" class="button-1">
+            </form>
+        <% else %>
+            <div class="login-buttons">
+                <form action="<%= new_user_url %>" method="GET">
+                    <input type="submit" value="Sign Up!" class="button-1">
+                </form>
+                <form action="<%= new_session_url %>" method="GET">
+                    <input type="submit" value="Log In" class="button-1">
+                </form>
+            </div>
+        <% end %>
+
+    </nav>
 
     <%= yield %>
   </body>
