@@ -1,0 +1,30 @@
+h1 {
+    font-family: "Audiowide", sans-serif;
+    display: flex;
+    justify-content: center;
+    font-size: 45px;
+    color: darkkhaki;
+    text-shadow: black;
+}
+
+* {
+    background-color: lightslategray;
+}
+
+.main-form {
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightblue;
+}
+
+.main-form form{
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+    font-size: 25px;
+    background-color: lightblue;
+}

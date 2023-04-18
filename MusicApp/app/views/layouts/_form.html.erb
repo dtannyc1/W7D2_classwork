@@ -1,0 +1,21 @@
+<% if type == :new_user %>
+    <% action_url = users_url %>
+<% else %>
+    <% action_url = session_url %>
+<% end %>
+
+<div class="main-form">
+    <form action="<% action_url %>" method="POST">
+        <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="user[:email]" value="<%= user.email %>" >
+        <br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="user[:password]" value="" >
+        <br>
+
+        <input type="submit" value="<%= type == :new_user ? 'Create Account' : 'Log in' %>">
+    </form>
+</div>
