@@ -1,12 +1,13 @@
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+    # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
-  # Defines the root path route ("/")
-  # root "articles#index"
+    # Defines the root path route ("/")
+    # root "articles#index"
 
-  root "sessions#new"
+    root "sessions#new"
 
-  resources(:users, only: [:new, :create, :show])
+    resources(:users, only: [:new, :create, :show])
+    resources(:bands)
 
-  resource(:session, only: [:new, :create, :destroy])
+    resource(:session, only: [:new, :create, :destroy])
 end
