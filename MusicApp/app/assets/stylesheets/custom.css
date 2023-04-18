@@ -11,6 +11,15 @@ h1 {
     text-shadow: black;
 }
 
+h2 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 32px;
+    color: brown;
+    width: 75%;
+    margin: auto;
+    text-align: center;
+}
+
 nav {
     width: 500px;
     margin: auto;
@@ -59,16 +68,24 @@ nav {
 }
 
 .bands-container {
-    width: 500px;
+    width: 75%;
+
     display: flex;
     flex-wrap: wrap;
-    background-color: blueviolet;
+    /* background-color: blueviolet; */
+    justify-content: center;
+    margin: auto;
 }
 
 .band-button {
-    width: 33%;
-    height: 20%;
+    width: 200px;
+    height: 75px;
+    margin: 10px;
     background-color: gold;
+    border-radius: 10px;
+    font-size: 16px;
+    /* inline-size: 100px;
+    overflow-wrap: break-word; */
 }
 
 .band-button:hover{
